@@ -28,7 +28,6 @@ function post (){
       };
       const list = document.getElementById("list");
       const formText = document.getElementById("content");
-      console.log(formText.value);
       const item = XHR.response.post;
       const html = `
         <div class="post">
@@ -39,7 +38,6 @@ function post (){
             ${item.content}
           </div>
         </div>`;
-        list.insertAdjacentHTML("afterend", html);
         list.insertAdjacentHTML("afterend", buildHTML(XHR));
         formText.value = "";
     };
